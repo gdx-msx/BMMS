@@ -1,0 +1,60 @@
+----------------------------------------
+     Bigger Memory Mapper Selector
+          Version 0.4 by GDX
+----------------------------------------
+
+ BMMS is a program that automatically selects the largest RAM
+ expansion with Memory Mapper as Main-RAM.
+ So BMMS is more efficient than the usual "universal POKE"*. It allows to run
+ software that do not take account secondary slots or using without asking
+ question the Memory Mapper in main RAM.
+ BMMS sets the segments in order 3, 2, 1, 0 for MSX1s.
+
+ (*) POKE-1,(15-PEEK(-1)\16)*17
+
+
+ Hardware Requirement:
+
+ - An MSX.
+ - Any RAM expansion with Memory Mapper.
+
+
+ Use:
+ 
+ Put the file on the disk or tape and run it by entering the
+ following command.
+ 
+BLOAD"BMMS",R
+ 
+ You can put it in an AUTOEXEC.BAS like following examples.
+
+ Example to automatically execute a Basic program after BMMS:
+
+10 BLOAD"BMMS",R
+20 RUN "YOURPRG.BAS"
+
+
+ Example to run the MSX-DOS:
+
+10 BLOAD"BMMS",R
+20 POKE &HF346,1: _CALL SYSTEM
+
+
+ Versions history:
+
+ v0.4
+
+- The Turbo R is no longer supported when booting under Disk-Basic v2.01
+  because the segment Protection System faults the segment search. Only the
+  "universal POKE" entered in this case.
+- No longer enters "universal POKE" when Main-RAM is in slot 0-X because it
+  causes the crash of MSX2s based on the Daewoo CPC-300 for example.
+
+ v0.3
+
+- Fixed some bugs.
+- File size is smaller.
+
+ v0.2
+
+- First version.

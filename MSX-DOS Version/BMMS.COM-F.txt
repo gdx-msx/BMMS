@@ -1,0 +1,32 @@
+----------------------------------------
+     Bigger Memory Mapper Selector
+   Version 0.4 pour MSX-DOS1 par GDX
+----------------------------------------
+
+ BMMS est un programme qui sélectionne la plus grosse extension de
+ mémoire vive mappée en tant que mémoire principale.
+
+ Note : Cette commande n'est pas utile pour les MSX1 sauf si vos Memory
+        Mapper sont capables d'initialiser leur pages à l'initialisation.
+ 
+ Matériel requis :
+ 
+ - Tout MSX
+ - Extension de RAM avec Memory Mapper quelconque
+ 
+ Utilisation :
+ 
+ Placez le fichier sur le disque à la racine puis executez-le depuis
+ le MSX-DOS en entrant la commande suivante.
+ 
+ BMMS
+
+ Vous pouvez le placer dans un AUTOEXEC.BAT.
+
+ Notes :
+
+- Si vous n'avez pas de Memory Mapper qui initialise ses pages lors
+  de l'initialisation du MSX, utilisez BMMS pour l'environnement BASIC, ou
+  placez une extension de 64Ko dans le Slot le plus inférieur.
+- Si vous n'avez qu'un seul Memory Mapper qui n'initialise ses pages,
+  placez-le dans un Slot inférieur aux autres Mapper.
