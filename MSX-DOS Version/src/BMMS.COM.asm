@@ -7,31 +7,31 @@
 
 ; Main-Rom entries
 
-RDSLT:	equ	0000Ch		; Read Slot
-CALSLT:	equ	0001Ch		; Call Slot
-ENASLT:	equ	00024h		; Slot select
-MSXVER:	equ	0002Dh
-DISSCR:	equ	00041h		; Screen disable
-ENASCR:	equ	00044h		; Screen enable
-LDIRMV:	equ	00059h		; VRam to Ram transfert
-LDIRVM:	equ	0005Ch		; Ram to VRam transfert
-INITXT:	equ	0006Ch		; SCREEN0
-BEEP:	equ	000C0h		; Produce a BEEP
+RDSLT	equ	0000Ch		; Read Slot
+CALSLT	equ	0001Ch		; Call Slot
+ENASLT	equ	00024h		; Slot select
+MSXVER	equ	0002Dh
+DISSCR	equ	00041h		; Screen disable
+ENASCR	equ	00044h		; Screen enable
+LDIRMV	equ	00059h		; VRam to Ram transfert
+LDIRVM	equ	0005Ch		; Ram to VRam transfert
+INITXT	equ	0006Ch		; SCREEN0
+BEEP	equ	000C0h		; Produce a BEEP
 
 ; System variable entries
 
-DISKVE:	equ	0F313h		; Disk-ROM version
-RAMAD0:	equ	0F341h		; Main-RAM on bank 0 (0000h~3fffh)
-RAMAD1:	equ	0F342h		; Main-RAM on bank 1 (4000h~7fffh)
-RAMAD2:	equ	0F343h		; Main-RAM on bank 2 (8000h~bfffh)
-RAMAD3:	equ	0F344h		; Main-RAM on bank 3 (c000h~ffffh)
-EXPTBL:	equ	0FCC1h		; Main-ROM Slot
-EXTBIO:	equ	0FFCAh		; Extended Bios entry
+DISKVE	equ	0F313h		; Disk-ROM version
+RAMAD0	equ	0F341h		; Main-RAM on bank 0 (0000h~3fffh)
+RAMAD1	equ	0F342h		; Main-RAM on bank 1 (4000h~7fffh)
+RAMAD2	equ	0F343h		; Main-RAM on bank 2 (8000h~bfffh)
+RAMAD3	equ	0F344h		; Main-RAM on bank 3 (c000h~ffffh)
+EXPTBL	equ	0FCC1h		; Main-ROM Slot
+EXTBIO	equ	0FFCAh		; Extended Bios entry
 
 ; System scratch area entries
 
-DMA:	equ	00080h		; Parameters address
-BDOS:	equ	00005h		; MSX-DOS function
+DMA	equ	00080h		; Parameters address
+BDOS	equ	00005h		; MSX-DOS function
 
 	org	0100h
 
@@ -240,7 +240,7 @@ No_Mapper_TXT:
 	db	13,"No Memory Mapper!",10,13,24h
 
 PRG_Source:
-	org	0c000h
+	.PHASE	0c000h
 
 Prim_SLT:
 	db	0
