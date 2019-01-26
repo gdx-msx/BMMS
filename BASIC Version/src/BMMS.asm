@@ -11,26 +11,26 @@
 
 ; Main-Rom entries
 
-CALSLT:	equ	0001Ch		; Call Slot
-ENASLT:	equ	00024h		; Slot select
-MSXVER:	equ	0002Dh		; Read MSX version
-DISSCR:	equ	00041h		; Screen disable
-ENASCR:	equ	00044h		; Screen enable
-LDIRMV:	equ	00059h		; VRAM to RAM transfert
-LDIRVM:	equ	0005Ch		; RAM to VRAM transfert
-INITXT:	equ	0006Ch		; SCREEN0
-RSLREG:	equ	00138h		; Read primary slots register
+CALSLT	equ	0001Ch		; Call Slot
+ENASLT	equ	00024h		; Slot select
+MSXVER	equ	0002Dh		; Read MSX version
+DISSCR	equ	00041h		; Screen disable
+ENASCR	equ	00044h		; Screen enable
+LDIRMV	equ	00059h		; VRAM to RAM transfert
+LDIRVM	equ	0005Ch		; RAM to VRAM transfert
+INITXT	equ	0006Ch		; SCREEN0
+RSLREG	equ	00138h		; Read primary slots register
 
 ; System variable entries
 
-DISKVE:	equ	0F313h		; Disk-ROM version
-RAMAD0:	equ	0F341h		; Main-RAM slot for the bank 0000h~3FFFh
-RAMAD1:	equ	0F342h		; Main-RAM slot for the bank 4000h~7FFFh
-RAMAD2:	equ	0F343h		; Main-RAM slot for the bank 8000h~BFFFh
-RAMAD3:	equ	0F344h		; Main-RAM slot for the bank C000h~FFFFh
-KBUF:	equ	0F41Fh		; Crunch Buffer
-H.PHYD:	equ	0FFA7h		; Physical Disk I/O Hook
-EXPTBL:	equ	0FCC1h		; Main-ROM Slot
+DISKVE	equ	0F313h		; Disk-ROM version
+RAMAD0	equ	0F341h		; Main-RAM slot for the bank 0000h~3FFFh
+RAMAD1	equ	0F342h		; Main-RAM slot for the bank 4000h~7FFFh
+RAMAD2	equ	0F343h		; Main-RAM slot for the bank 8000h~BFFFh
+RAMAD3	equ	0F344h		; Main-RAM slot for the bank C000h~FFFFh
+KBUF	equ	0F41Fh		; Crunch Buffer
+H.PHYD	equ	0FFA7h		; Physical Disk I/O Hook
+EXPTBL	equ	0FCC1h		; Main-ROM Slot
 
 	org	0D000h-7
 
